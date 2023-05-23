@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:context=".ui.home.AddItemFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:icon="@drawable/ic_close"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="@string/save"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="SAVE" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/memory_name"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+                app:layout_constraintTop_toTopOf="@id/guidelineHorizontal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_location"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/memory_location"
+                android:inputType="textMultiLine|textImeMultiLine"
+                app:layout_constraintStart_toStartOf="@id/input_name"
+                app:layout_constraintTop_toBottomOf="@id/input_name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_notes"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/memory_notes"
+                android:inputType="textMultiLine|textImeMultiLine"
+                app:layout_constraintStart_toStartOf="@id/input_name"
+                app:layout_constraintTop_toBottomOf="@id/input_location" />
+
+            <Button
+                android:id="@+id/btn_date"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/date"
+                app:layout_constraintStart_toStartOf="@id/input_name"
+                app:layout_constraintTop_toBottomOf="@id/input_notes" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_date"
+                app:layout_constraintEnd_toStartOf="@id/guidelineVerticalEnd"
+                app:layout_constraintTop_toTopOf="@id/btn_date"
+                tools:text="Date here" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_mood"
+                style="@style/Widget.Material3.Slider"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:stepSize="50.0"
+                android:value="50.0"
+                android:valueFrom="0.0"
+                android:valueTo="100.0"
+                app:layout_constraintStart_toStartOf="@id/input_name"
+                app:layout_constraintTop_toBottomOf="@id/btn_date" />
+
+            <TextView
+                android:id="@+id/tv_mood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/slider_mood"
+                app:layout_constraintEnd_toStartOf="@id/guidelineVerticalEnd"
+                app:layout_constraintTop_toTopOf="@id/slider_mood"
+                tools:text="Mood here" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_of_travel"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@id/input_name"
+                app:layout_constraintTop_toBottomOf="@id/slider_mood"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:labelFor="@string/type"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

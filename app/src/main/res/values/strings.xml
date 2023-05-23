@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Travel Memories</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="share">Share</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log Out</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="go_back">GO BACK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="x">X</string>
+    <string name="save">SAVE</string>
+    <string name="item_list">Item List</string>
+    <string name="add_item">Add Item</string>
+    <string name="home">Home</string>
+    <string name="memory_name">Memory name</string>
+    <string name="sad">Sad</string>
+    <string name="normal">Normal</string>
+    <string name="happy">Happy</string>
+    <string name="schedule">Schedule</string>
+    <string name="important">Important</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_message">Welcome to your schedule app!</string>
+    <string name="additional_notes">Additional notes</string>
+    <string name="hour">HOUR</string>
+    <string name="date">DATE</string>
+    <string name="memory_location">Location</string>
+    <string name="memory_notes">Notes</string>
+    <string name="type">Type</string>
+    <string name="type_of_travel">Type of travel</string>
+    <string name="memory_title">Title</string>
+    <string name="date_lower">Date</string>
+    <string name="mood">Mood</string>
+</resources>
